@@ -12,6 +12,8 @@ const BlogPosts = ({ data }) => {
         {blogPosts.map(({ node: post }) => (
           <div key={post.id}>
             <Link to={`/blogpost/${post.slug}`}>{post.title} {post.lastName}</Link>
+
+          
           </div>
         ))}
         <span className="mgBtm__24" />

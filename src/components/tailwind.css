@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Copse&display=swap');
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -27,6 +28,12 @@ body {
 /**
  * Render the `main` element consistently in IE.
  */
+
+ h1 {
+  -webkit-text-stroke: 2px #2b6cb0;
+  font-family: 'Copse', serif;
+
+ }
 
 main {
   display: block;
