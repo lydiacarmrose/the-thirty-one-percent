@@ -1,9 +1,9 @@
-import React from "react";
-import { Link, graphql } from "gatsby";
-import Layout from "../components/layout";
-import SEO from "../components/seo";
+import React from "react"
+import { Link, graphql } from "gatsby"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
 const BlogPosts = ({ data }) => {
-  const blogPosts = data.allContentfulArticle.edges;
+  const blogPosts = data.allContentfulArticle.edges
   return (
     <Layout>
       <SEO title="Blog posts" />
@@ -11,21 +11,31 @@ const BlogPosts = ({ data }) => {
       <div className="blogposts">
         {blogPosts.map(({ node: post }) => (
           <div key={post.id}>
-            <Link to={`/blogpost/${post.slug}`}>{post.title} {post.lastName}</Link>
+            <Link to={`/blogpost/${post.slug}`}>
+              {post.title} {post.lastName}
+            </Link>
 
-          
+            {post.mainImage !== null && (
+              <img
+                className="lg:pr-20 lg:h-full w-full object-cover object-center "
+                src={post.mainImage.file.url}
+              />
+            )}
           </div>
         ))}
         <span className="mgBtm__24" />
         <Link to="/">Go back to the homepage</Link>
       </div>
     </Layout>
-  );
-};
-export default BlogPosts;
+  )
+}
+export default BlogPosts
 export const query = graphql`
   query BlogPostsPageQuery {
-    allContentfulArticle(limit: 1000) {
+    allContentfulArticle(
+      limit: 1000
+      filter: { node_locale: { eq: "en-US" } }
+    ) {
       edges {
         node {
           id
@@ -44,4 +54,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`
