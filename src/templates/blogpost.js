@@ -100,14 +100,17 @@ function prepContent(dataContent) {
       let h2
       if (d[KEY_FIRST_H2]) {
         h2 = `
-        <div class="w-full m-auto">
-          <h2
-            style="font-family: 'Copse';"
-            class="bg-yellow-700"
-          >
+        <div class="hidden lg:block lg:grid lg:grid-cols-2">
+        <div class="col-span-1 ">
+          <h2 style="font-family: 'Copse'" class="float-right border-b-4 border-blue-700 -mr-16 pr-5 pb-2 pl-5 text-3xl text-blue-700">
             ${content}
           </h2>
-        </div>`
+        </div>
+ 
+    <div class="border-l-4 border-blue-700 col-start-2 col-span-1 pt-4 pl-4 pr-32 ml-16">
+    </div>
+    </div>
+   `
       } else {
         h2 = `
       <div class="w-full m-auto">
@@ -212,9 +215,9 @@ function prepContentintro(dataContent) {
       )
       lastParaData[KEY_PARAS_IN_SECTION].length = 0
     } else if (nodeType == "paragraph") {
-      const pClass = "bg-yellow-700"
-      const pClassLastLeft = "bg-yellow-700"
-      const pClassLastRite = "bg-yellow-700"
+      const pClass = "font-serif"
+      const pClassLastLeft = "font-serif"
+      const pClassLastRite = "font-serif"
       const pClassOption = d[KEY_LAST_PARA]
         ? d[KEY_LEFT_WINDER]
           ? pClassLastLeft
@@ -276,9 +279,6 @@ const Article = ({ data }) => {
 
         <div className="mt-5 mx-auto ml-8 mr-8 border-l-2 border-blue-700 border-t-2 lg:border-l-4 lg:border-t-4 lg:col-start-2 lg:row-start-2 lg:row-span-1 lg:col-span-1 pt-2 lg:pt-4 pl-2 lg:pl-4 lg:mr-48 lg:ml-16">
           <div>{ReactHtmlParser(parsedIntro)}</div>
-          <p className="font-serif">
-            <em>Dummy text</em>
-          </p>
         </div>
       </div>
       <div className="hidden lg:visible lg:grid lg:grid-cols-2 ">
