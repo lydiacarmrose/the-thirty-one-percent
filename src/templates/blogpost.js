@@ -125,11 +125,11 @@ function prepContent(dataContent) {
 
       nodes.push(h2)
     } else if (nodeType == "paragraph") {
-      const pClass = "w-8/12 m-auto font-serifs leading-relaxed pl-5 pr-5 mb-5"
+      const pClass = "w-8/12 m-auto leading-relaxed pl-5 pr-5 mb-5"
       const pClassLastLeft =
-        "w-8/12 m-auto font-serifs leading-relaxed pl-5 pr-5 border-l-4 border-blue-700 pb-5"
+        "w-8/12 m-auto leading-relaxed pl-5 pr-5 border-l-4 border-blue-700 pb-5"
       const pClassLastRite =
-        "w-8/12 m-auto font-serifs leading-relaxed pl-5 pr-5 border-r-4 border-blue-700 pb-5"
+        "w-8/12 m-auto leading-relaxed pl-5 pr-5 border-r-4 border-blue-700 pb-5"
       const pClassOption = d[KEY_LAST_PARA]
         ? d[KEY_LEFT_WINDER]
           ? pClassLastLeft
@@ -215,9 +215,9 @@ function prepContentintro(dataContent) {
       )
       lastParaData[KEY_PARAS_IN_SECTION].length = 0
     } else if (nodeType == "paragraph") {
-      const pClass = "font-serif"
-      const pClassLastLeft = "font-serif"
-      const pClassLastRite = "font-serif"
+      const pClass = "text-lg"
+      const pClassLastLeft = "text-lg"
+      const pClassLastRite = "text-lg"
       const pClassOption = d[KEY_LAST_PARA]
         ? d[KEY_LEFT_WINDER]
           ? pClassLastLeft
@@ -258,6 +258,7 @@ const Article = ({ data }) => {
 
   return (
     <Layout>
+      
       <div className="lg:grid lg:grid-cols-2 lg:grid-rows-2">
         <div className="lg:col-span-1 lg:row-span-2 lg:px-1 lg:h-screen">
           <img
@@ -271,14 +272,14 @@ const Article = ({ data }) => {
             {title}
             <br /> {lastName}
           </h1>
-          <h2 className="font-hairline text-gray-500 text-2xl ml-2 lg:ml-0 ">
+          <h2 className="font-hairline text-gray-800 text-2xl ml-2 lg:ml-0 ">
             {businessName}
           </h2>
-          <h3>{featureType2.title}</h3>
+          {/* <h3>{featureType2.title}</h3> */}
         </div>
 
         <div className="mt-5 mx-auto ml-8 mr-8 border-l-2 border-blue-700 border-t-2 lg:border-l-4 lg:border-t-4 lg:col-start-2 lg:row-start-2 lg:row-span-1 lg:col-span-1 pt-2 lg:pt-4 pl-2 lg:pl-4 lg:mr-48 lg:ml-16">
-          <div>{ReactHtmlParser(parsedIntro)}</div>
+          <div className="intro pl-5"><em>{ReactHtmlParser(parsedIntro)}</em></div>
         </div>
       </div>
       <div className="hidden lg:visible lg:grid lg:grid-cols-2 ">
@@ -286,7 +287,7 @@ const Article = ({ data }) => {
         <div className="h-0 lg:border-l-4 lg:border-blue-700 lg:col-start-2 lg:h-20 lg:col-span-1 lg:pt-4 lg:pl-4 lg:pr-32 lg:ml-16"></div>
       </div>
 
-      <div> {ReactHtmlParser(parsedBodyText)} </div>
+      <div className="text-lg"> {ReactHtmlParser(parsedBodyText)} </div>
 
       <Link to="/blogposts">View more posts</Link>
       <Link to="/">Back to Home</Link>

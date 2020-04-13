@@ -7,18 +7,24 @@ const BlogPosts = ({ data }) => {
   return (
     <Layout>
       <SEO title="Blog posts" />
+      <div>
+          <h1 className="text-6xl lowercase">The Thirty-One Percent</h1>
+        </div>
       <div className="blogposts">
+      <div>
+          <Link to={`/`}><h2 className="text-6xl lowercase text-center">The Thirty-One Percent</h2></Link>
+        </div>
       <div className="grid grid-cols-2">
         {blogPosts.map(({ node: post }) => (
        
          <div key={post.id}>
             
               
-                <div className="w-full p-5">
+                <div className="p-5">
             <Link to={`/blogpost/${post.slug}`}>
             {post.mainImage !== null && (
               <img
-                className=""
+                className="w-full object-cover object-center"
                 src={post.mainImage.file.url}
               />
             )}
