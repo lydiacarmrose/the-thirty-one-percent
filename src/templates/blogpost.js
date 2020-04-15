@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import ReactHtmlParser from "react-html-parser"
+// import Img from "gatsby-image"
 
 const KEY_CONTENT = "content"
 const KEY_NODE_TYPE = "nodeType"
@@ -275,7 +276,7 @@ const Article = ({ data }) => {
           <h2 className="font-hairline text-gray-800 text-2xl ml-2 lg:ml-0 ">
             {businessName}
           </h2>
-          {/* <h3>{featureType2.title}</h3> */}
+          <h3>{featureType2[0].title}</h3>
         </div>
 
         <div className="mt-5 mx-auto ml-8 mr-8 border-l-2 border-blue-700 border-t-2 lg:border-l-4 lg:border-t-4 lg:col-start-2 lg:row-start-2 lg:row-span-1 lg:col-span-1 pt-2 lg:pt-4 pl-2 lg:pl-4 lg:mr-48 lg:ml-16">

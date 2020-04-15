@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `The Thirty-One Percent`,
     description: `Collection of profiles of female business-owners in the Boston area`,
-    author: `Lydia Rosenberg`,
+    author: `Lydia`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

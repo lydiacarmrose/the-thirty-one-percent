@@ -11,9 +11,7 @@ const BlogPosts = ({ data }) => {
           <h1 className="text-6xl lowercase">The Thirty-One Percent</h1>
         </div>
       <div className="blogposts">
-      <div>
-          <Link to={`/`}><h2 className="text-6xl lowercase text-center">The Thirty-One Percent</h2></Link>
-        </div>
+
       <div className="grid grid-cols-2">
         {blogPosts.map(({ node: post }) => (
        
