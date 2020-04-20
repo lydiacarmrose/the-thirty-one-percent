@@ -10,17 +10,17 @@ const BlogPost = ({ data }) => {
     <Layout>
       <SEO title="Blog posts" />
       <div className="blogposts">
-      <div className="w-1/2 h-full fixed bg-white">
-<div className="grid grid-rows-3">
-    <div className="row-start-1"><h1 className="bg-white text-6xl pl-10 uppercase pt-16 leading-relaxed tracking-wide pr-10">The Thirty-One Percent</h1></div>
-    <div className="row-start-3"><p className="text-4xl pl-10 pr-24 text-gray-700">Traditional profiles tend to ask successful women about their “favorite places to shop” or their “guilty pleasures.” You won’t find those questions here.</p></div>
+      <div className="md:w-1/2 md:h-full md:fixed bg-white">
+<div className="md:grid md:grid-rows-3">
+    <div className="md:row-start-1"><h1 className="bg-white text-6xl pl-20 uppercase pt-16 leading-relaxed tracking-wide pr-10">The Thirty-One Percent</h1></div>
+    <div className="md:row-start-3"><p className="md:text-4xl pl-20 pr-24 text-gray-700">Traditional profiles tend to ask successful women about their “favorite places to shop” or their “guilty pleasures.” You won’t find those questions here.</p></div>
 </div>
 </div>
-      <div className="w-1/2 h-auto float-right">
-        <div className="flex flex-wrap ">
+      <div className="md:w-1/2 md:h-auto md:float-right">
+        <div className="md:flex md:flex-wrap ">
 
         {blogPosts.map(({ node: post }) => (
-                <div className="w-1/2 h-auto">
+                <div className="w-screen md:w-1/2 md:h-auto">
          <div key={post.id}>
             
    
