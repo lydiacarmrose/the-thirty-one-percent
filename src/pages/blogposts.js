@@ -12,7 +12,7 @@ const BlogPost = ({ data }) => {
       <div className="blogposts">
       <div className="w-1/2 h-full fixed bg-white">
 <div className="grid grid-rows-3">
-    <div className="row-start-1"><h1 className="bg-white text-6xl pl-10 uppercase pt-16 text-white leading-relaxed tracking-wide pr-10">The Thirty-One Percent</h1></div>
+    <div className="row-start-1"><h1 className="bg-white text-6xl pl-10 uppercase pt-16 leading-relaxed tracking-wide pr-10">The Thirty-One Percent</h1></div>
     <div className="row-start-3"><p className="text-4xl pl-10 pr-24 text-gray-700">Traditional profiles tend to ask successful women about their “favorite places to shop” or their “guilty pleasures.” You won’t find those questions here.</p></div>
 </div>
 </div>

@@ -29,8 +29,13 @@ body {
 /**
  * Render the `main` element consistently in IE.
  */
+h1 {
+  font-family: 'Oswald';
+  font-weight: 500;
 
- h1 {
+ }
+
+.bigname {
   -webkit-text-stroke: 3px #2b6cb0;
   font-family: 'Oswald';
   font-weight: 500;
