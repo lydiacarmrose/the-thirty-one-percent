@@ -11,8 +11,9 @@ const BlogPost = ({ data }) => {
       <SEO title="Blog posts" />
       <div className="blogposts">
       <div className="w-1/2 h-full fixed bg-white">
-<div>
-    <h1 className="bg-white text-6xl pl-8 pt-8 text-white leading-relaxed tracking-wide">The Thirty-One Percent</h1>
+<div className="grid grid-rows-3">
+    <div className="row-start-1"><h1 className="bg-white text-6xl pl-10 uppercase pt-16 text-white leading-relaxed tracking-wide pr-10">The Thirty-One Percent</h1></div>
+    <div className="row-start-3"><p className="text-4xl pl-10 pr-24 text-gray-700">Traditional profiles tend to ask successful women about their “favorite places to shop” or their “guilty pleasures.” You won’t find those questions here.</p></div>
 </div>
 </div>
       <div className="w-1/2 h-auto float-right">
@@ -34,10 +35,14 @@ const BlogPost = ({ data }) => {
               />
             )}
             </Link>
-            <div className="nameblock">
+            <div className="grid justify-center">
+              <div className="grid items-center w-64 h-24 bg-white nameblock  -mt-32 ">
             <Link to={`/blogpost/${post.slug}`}>
-             <h3 className=" bg-white   text-2xl -mt-20 font-bold tracking-widest uppercase leading-loose text-center"> {post.title} {post.lastName}</h3>
+   
+             <h3 className=" align-middle text-xl  tracking-widest uppercase text-center"> {post.title} {post.lastName} <br /> <span className=" font-serif font-thin lowercase text-base">{post.businessName}</span></h3>
+           
             </Link>
+              </div>
             </div>
           </div>
             </div>
@@ -65,6 +70,7 @@ export const query = graphql`
           id
           title
           lastName
+          businessName
           slug
           bodyText {
             bodyText

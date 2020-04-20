@@ -103,7 +103,7 @@ function prepContent(dataContent) {
         h2 = `
         <div class="hidden lg:block lg:grid lg:grid-cols-2">
         <div class="col-span-1 ">
-          <h2 style="font-family: 'Copse'" class="float-right border-b-4 border-blue-700 -mr-16 pr-5 pb-2 pl-5 text-3xl text-blue-700">
+          <h2 style="font-family: 'Oswald'" class="uppercase float-right border-b-4 border-blue-700 -mr-16 pr-5 pb-2 pl-5 text-3xl text-blue-700">
             ${content}
           </h2>
         </div>
@@ -116,8 +116,8 @@ function prepContent(dataContent) {
         h2 = `
       <div class="w-full m-auto">
         <h2
-          style="font-family: 'Copse';"
-          class="m-auto text-3xl text-blue-700 text-center"
+          style="font-family: 'Oswald';"
+          class="uppercase m-auto text-3xl text-blue-700 text-center"
         >
           ${content}
         </h2>
@@ -269,14 +269,14 @@ const Article = ({ data }) => {
           />
         </div>
         <div className="lg:col-start-2 lg:col-span-1 lg:row-span-1s">
-          <h1 className="text-white ml-2 lg:-mt-0 lg:ml-0 text-6xl leading-tight lg:-ml-2 lg:pt-32 ">
+          <h1 className="text-white tml-2 lg:-mt-0 lg:ml-0 text-6xl leading-tight lg:-ml-2 lg:pt-32 uppercase tracking-wide">
             {title}
             <br /> {lastName}
           </h1>
-          <h2 className="font-hairline text-gray-800 text-2xl ml-2 lg:ml-0 ">
+          <h2 className=" text-gray-800 text-2xl ml-2 lg:ml-0 ">
             {businessName}
           </h2>
-          <h3>{featureType2[0].title}</h3>
+          <h2 className=" text-2xl" >{featureType2[0].title}</h2> 
         </div>
 
         <div className="mt-5 mx-auto ml-8 mr-8 border-l-2 border-blue-700 border-t-2 lg:border-l-4 lg:border-t-4 lg:col-start-2 lg:row-start-2 lg:row-span-1 lg:col-span-1 pt-2 lg:pt-4 pl-2 lg:pl-4 lg:mr-48 lg:ml-16">

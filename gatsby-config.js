@@ -7,6 +7,18 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Signika\:300,400,600.700`,
+          `source sans pro\:300,400,400i,700`, // you can also specify font weights and styles
+          `Shadows Into Light`,
+        ],
+        display: 'swap'
+      }
+    },
+    
+    {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: `rtxhzc53togc`,
