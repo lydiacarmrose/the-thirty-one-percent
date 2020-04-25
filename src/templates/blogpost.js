@@ -329,7 +329,7 @@ const Article = ({ data }) => {
         </div>
 
         <div className="mt-5 mx-auto ml-8 mr-8 border-l-2 border-blue-700 border-t-2 lg:border-l-4 lg:border-t-4 lg:col-start-2 lg:row-start-2 lg:row-span-1 lg:col-span-1 pt-2 lg:pt-4 pl-2 lg:pl-4 lg:mr-48 lg:ml-16">
-          <div className="intro pl-5"><em>{ReactHtmlParser(parsedIntro)}</em></div>
+          <div className="intro pl-5 text-xl"><em>{ReactHtmlParser(parsedIntro)}</em></div>
         </div>
       </div>
       <div className="hidden lg:visible lg:grid lg:grid-cols-2 ">
