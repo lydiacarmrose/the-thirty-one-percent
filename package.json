@@ -37,8 +37,8 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
+    "build": "postcss src/components/layout.css -o src/components/index.css && gatsby build",
+    "develop": "postcss src/components/layout.css -o src/components/index.css && gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",

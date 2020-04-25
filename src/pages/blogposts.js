@@ -2,13 +2,14 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-// import Img from "gatsby-image"
 
 const BlogPost = ({ data }) => {
   const blogPosts = data.allContentfulArticle.edges
   return (
     <Layout>
       <SEO title="Blog posts" />
+    
+
       <div className="blogposts">
       <div className="md:w-1/2 md:h-full md:fixed bg-white">
 <div className="md:grid md:grid-rows-3">
@@ -86,3 +87,17 @@ export const query = graphql`
     }
   }
 `
+// export const images = graphql`
+// {
+//   allContentfulAsset {
+//     edges {
+//       node {
+//         fluid(maxWidth: 10) {
+//           src
+//         }
+//       }
+//     }
+//   }
+// }
+
+// `
