@@ -14,7 +14,7 @@ const BlogPost = ({ data }) => {
       <div className="md:w-1/2 md:h-full md:fixed bg-white">
 <div className="md:grid md:grid-rows-3">
     <div className="md:row-start-1"><h1 className="bg-white text-6xl pl-20 uppercase pt-16 leading-relaxed tracking-wide pr-10">The Thirty-One Percent</h1></div>
-    <div className="md:row-start-3"><p className="md:text-4xl pl-20 pr-24 text-gray-700">Traditional profiles tend to ask successful women about their “favorite places to shop” or their “guilty pleasures.” You won’t find those questions here.</p></div>
+    <div className="md:row-start-3"><p className="md:text-3xl pl-20 pr-24 text-gray-700">Traditional profiles tend to ask successful women about their “favorite places to shop” or their “guilty pleasures.” You won’t find those questions here. 31% of businesses in Boston are owned by women—we're telling their stories.</p></div>
 </div>
 </div>
       <div className="md:w-1/2 md:h-auto md:float-right">
@@ -22,7 +22,7 @@ const BlogPost = ({ data }) => {
 
         {blogPosts.map(({ node: post }) => (
                 <div className="w-screen md:w-1/2 md:h-auto">
-         <div key={post.id}>
+         <div key={post.id}> 
             
    
                 <div className="imagebox pb-1 pr-5 -mr-4 ">

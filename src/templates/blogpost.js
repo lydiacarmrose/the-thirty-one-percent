@@ -38,6 +38,34 @@ function wrapParas(parasInSection, left, nodes) {
   }
 }
 
+const markupCssTable = {
+  italic: 'font-style:italic;',
+  bold: 'font-weight:bold;',
+  underline: 'text-decoration:underline;'
+};
+
+
+function addTextNode( c, markup ) {
+  const marksNum = c.marks.length;
+  const gotMarks = marksNum > 0;
+
+  if (gotMarks) {
+    markup.push( `<span style="`);
+    const markIns = c.marks.map( m => {
+      return markupCssTable[m.type];
+    });
+    markup.push( markIns.join('') );
+    markup.push( `">` );
+  }
+
+  markup.push( c.value );
+
+  if (gotMarks) {
+    markup.push( `</span>` );
+  }
+}
+
+
 function prepContent(dataContent) {
   const nodes = []
   const useContent = []
@@ -46,7 +74,27 @@ function prepContent(dataContent) {
   for (const [index, value] of dataContent.entries()) {
     if (value.content.length > 0) {
       const nodeType = value.nodeType
-      const content = value.content[0].value
+      const content = value.content.map( c => {
+        const markup = [];
+
+        if (c.nodeType == 'text') {
+          addTextNode( c, markup );
+        }
+        else if (c.nodeType == 'hyperlink') {
+          markup.push( `<a style="color: #2b6cb0;" href="${c.data.uri}">`);
+
+          const hlinkmarkup = [];
+          c.content.map( h => {
+            addTextNode( h, hlinkmarkup );
+          })
+          markup.push( hlinkmarkup.join('') );
+
+          markup.push( `</a>` );
+        }
+
+        return markup.join('');
+      } ).join('');
+
 
       const obj = {
         [KEY_CONTENT]: content,
@@ -154,6 +202,7 @@ function prepContent(dataContent) {
   lastParaData[KEY_PARAS_IN_SECTION].length = 0
 
   return nodes.join("")
+  
 }
 
 function prepContentintro(dataContent) {
