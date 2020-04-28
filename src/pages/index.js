@@ -16,29 +16,30 @@ const BlogPost = ({ data }) => {
       <SEO title="Blog posts" />
 
       <div className="blogposts">
-        <div className="md:w-1/2 md:h-full md:fixed bg-white">
-          <div className="md:grid md:grid-rows-3">
-            <div className="md:row-start-1">
-              <h1 className="bg-white text-6xl pl-20 uppercase pt-16 leading-relaxed tracking-wide pr-10">
+        <div className="leftbox md:w-1/2 md:h-full md:fixed bg-white md:flex md:flex-col md:justify-between">
+      
+<div>
+              <h1 className="bg-white text-2xl md:text-6xl pl-20 uppercase pt-16 leading-relaxed tracking-wide pr-10">
                 The Thirty-One Percent
               </h1>
-            </div>
-            <div className="md:row-start-3">
-              <p className="md:text-3xl pl-20 pr-24 text-gray-700">
+              </div>
+              <div>
+              <p className="md:text-4xl pl-20 pr-24 text-gray-700 pb-16">
                 Traditional profiles tend to ask successful women about their
                 “favorite places to shop” or their “guilty pleasures.” You won’t
-                find those questions here. 31% of businesses in Boston are owned
-                by women—we're telling their stories.
+                find those questions here. <span className="text-blue-700">31% of businesses in Boston are owned
+                by women—we're telling their stories.</span>
               </p>
+              </div>
             </div>
-          </div>
-        </div>
+
+    
         <div className="md:w-1/2 md:h-auto md:float-right">
           <div className="md:flex md:flex-wrap ">
             {blogPosts.map(({ node: post }) => (
               <div className="w-screen md:w-1/2 md:h-auto">
                 <div key={post.id}>
-                  <div className="imagebox pb-1 pr-5 -mr-4 ">
+                  <div className="imagebox">
                     <Link to={`/blogpost/${post.slug}`}>
                       {findImage(post.mainImage.contentful_id) !== null && (
                         <img
@@ -73,8 +74,7 @@ const BlogPost = ({ data }) => {
             ))}
           </div>
         </div>
-        <span className="mgBtm__24" />
-        <Link to="/">Go back to the homepage</Link>
+
       </div>
     </Layout>
   )
@@ -85,7 +85,7 @@ export const query = graphql`
     allContentfulAsset(limit: 1000, filter: { node_locale: { eq: "en-US" } }) {
       edges {
         node {
-          fluid(maxWidth: 640) {
+          fluid(maxWidth: 1000) {
             src
           }
           contentful_id

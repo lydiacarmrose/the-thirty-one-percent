@@ -65,12 +65,39 @@ p {
 
 .imagebox {
   height: 400px;
+  overflow: hidden;
 }
 
 
 main {
   display: block;
 }
+
+.imagebox img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.imagebox:hover img {
+	-webkit-transform: scale(1.2);
+	transform: scale(1.2);
+}
+
+.leftbox {
+  animation: fadeInAnimation ease 2s; 
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards; 
+}
+@keyframes fadeInAnimation { 
+  0% { 
+      opacity: 0; 
+  } 
+  100% { 
+      opacity: 1; 
+   } 
+} 
+
 
 /**
  * Correct the font size and margin on `h1` elements within `section` and
@@ -11161,7 +11188,7 @@ video {
 }
 
 .text-6xl {
-  font-size: 5rem;
+  font-size: 8rem;
 }
 
 .italic {
@@ -37810,7 +37837,7 @@ video {
   }
 
   .md\:text-6xl {
-    font-size: 4rem;
+    font-size: 6rem;
   }
 
   .md\:italic {
