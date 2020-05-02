@@ -54,6 +54,10 @@ h3 {
 p {
   font-family: 'EB Garamond', serif;
 }
+ 
+li {
+  font-family: 'Oswald', sans-serif;
+}
 
 .intro {
   font-family: 'EB Garamond', serif;
@@ -66,6 +70,11 @@ p {
 .imagebox {
   height: 400px;
   overflow: hidden;
+}
+
+.gallerybox {
+  height: 700px;
+
 }
 
 
@@ -11188,7 +11197,7 @@ video {
 }
 
 .text-6xl {
-  font-size: 8rem;
+  font-size: 7rem;
 }
 
 .italic {
@@ -51162,7 +51171,7 @@ video {
   }
 
   .lg\:text-6xl {
-    font-size: 4rem;
+    font-size: 8rem;
   }
 
   .lg\:italic {

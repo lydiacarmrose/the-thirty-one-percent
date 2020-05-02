@@ -310,7 +310,7 @@ const Article = ({ data }) => {
     <Layout>
       
       <div className="lg:grid lg:grid-cols-2 lg:grid-rows-2">
-        <div className="lg:col-span-1 lg:row-span-2 lg:px-1 lg:h-screen">
+        <div className="lg:col-span-1 lg:row-span-2 lg:pr-1 lg:h-screen">
           <img
             className="lg:pr-20 lg:h-full w-full object-cover object-center "
             alt={mainImage.title}
@@ -318,14 +318,14 @@ const Article = ({ data }) => {
           />
         </div>
         <div className="ml-5 lg:ml-0 lg:col-start-2 lg:col-span-1 lg:row-span-1s">
-          <h1 className="bigname text-white ml-2 lg:-mt-0 lg:ml-0 text-6xl leading-tight lg:-ml-2 lg:pt-32 uppercase tracking-wide">
+          <h1 className="bigname text-white ml-2 lg:-mt-0 lg:ml-0 text-6xl lg:text-6xl leading-tight lg:-ml-2  uppercase tracking-wide">
             {title}
             <br /> {lastName}
           </h1>
-          <h2 className=" text-gray-800 text-2xl ml-2 lg:ml-0 ">
+          <h2 className=" text-gray-800 uppercase text-2xl ml-2 lg:ml-0 ">
             {businessName}
           </h2>
-          <h2 className="text-gray-700 text-2xl" >{featureType2[0].title}</h2> 
+          <h2 className="text-gray-700 uppercase text-2xl" >{featureType2[0].title}</h2> 
         </div>
 
         <div className="lg:mt-5 lg:mx-auto lg:ml-8 mr-8 lg:border-l-2 lg:border-blue-700 lg:border-t-2 lg:border-l-4 lg:border-t-4 lg:col-start-2 lg:row-start-2 lg:row-span-1 lg:col-span-1 pt-2 lg:pt-4 pl-2 lg:pl-4 lg:mr-48 lg:ml-16">

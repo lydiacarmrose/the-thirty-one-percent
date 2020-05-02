@@ -5,23 +5,16 @@ import "./index.css"
 
 const Header = ({ siteTitle }) => (
   <header>
-   <div className="menu-wrap">
-    <input type="checkbox" class="toggler">
-    <div className="hamburger"><div></div></div>
-    <div className="menu">
-      <div>
-        <div>
-          <ul>
-            <li><Link to="#">Home</Link></li>
-            <li><Link to="#">About</Link></li>
-            <li><Link to="#">Services</Link></li>
-            <li><Link to="#">Contact</Link></li>
+   <div className="w-full h-12">
+
+          <ul className="float-right">
+            <li className="inline-block pr-3 pt-3 text-2xl hover:text-blue-700"><Link to="/">Home</Link></li>
+            <li className="inline-block pr-3 pt-3 text-2xl hover:text-blue-700"><Link to="/about">About</Link></li>
+            <li className="inline-block pr-3 pt-3 text-2xl hover:text-blue-700"><Link to="/gallery">Gallery</Link></li>
+            <li className="inline-block pr-3 pt-3 text-2xl hover:text-blue-700"><a href="https://www.instagram.com/the31percent/">Instagram</a></li>
           </ul>
-        </div>
-      </div>
+
     </div>
-  </input>
-  </div>
   </header>
 )
 

@@ -19,12 +19,12 @@ const BlogPost = ({ data }) => {
         <div className="leftbox md:w-1/2 md:h-full md:fixed bg-white md:flex md:flex-col md:justify-between">
       
 <div>
-              <h1 className="bg-white text-2xl md:text-6xl pl-20 uppercase pt-16 leading-relaxed tracking-wide pr-10">
+              <h1 className="md:text-left text-center bg-white text-2xl md:text-6xl md:pl-20 uppercase leading-relaxed tracking-wide md:pr-10">
                 The Thirty-One Percent
               </h1>
               </div>
               <div>
-              <p className="md:text-4xl pl-20 pr-24 text-gray-700 pb-16">
+              <p className="text-lg italic md:text-3xl pl-3 pr-3 md:pl-20 md:pr-24 text-gray-700 pb-5 md:pb-24">
                 Traditional profiles tend to ask successful women about their
                 “favorite places to shop” or their “guilty pleasures.” You won’t
                 find those questions here. <span className="text-blue-700">31% of businesses in Boston are owned
@@ -37,7 +37,7 @@ const BlogPost = ({ data }) => {
         <div className="md:w-1/2 md:h-auto md:float-right">
           <div className="md:flex md:flex-wrap ">
             {blogPosts.map(({ node: post }) => (
-              <div className="w-screen md:w-1/2 md:h-auto">
+              <div className="w-screen md:w-1/2 md:h-auto pb-5 md:pb-0">
                 <div key={post.id}>
                   <div className="imagebox">
                     <Link to={`/blogpost/${post.slug}`}>
