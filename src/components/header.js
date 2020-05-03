@@ -4,17 +4,26 @@ import React from "react"
 import "./index.css"
 
 const Header = ({ siteTitle }) => (
-  <header>
-   <div className="w-full h-12">
+  <header className="h-0">
+    {/* <div className="fixed"> */}
+<div id="menuToggle">
 
-          <ul className="float-right">
-            <li className="inline-block pr-3 pt-3 text-2xl hover:text-blue-700"><Link to="/">Home</Link></li>
-            <li className="inline-block pr-3 pt-3 text-2xl hover:text-blue-700"><Link to="/about">About</Link></li>
-            <li className="inline-block pr-3 pt-3 text-2xl hover:text-blue-700"><Link to="/gallery">Gallery</Link></li>
-            <li className="inline-block pr-3 pt-3 text-2xl hover:text-blue-700"><a href="https://www.instagram.com/the31percent/">Instagram</a></li>
+    <input type="checkbox" />
+
+    <span></span>
+    <span></span>
+    <span></span>
+    
+
+    <ul id="menu" className="w-screen h-screen bg-blue-700 text-center flex flex-col justify-evenly right-0 bottom-0">
+            <li className="-pt-5 text-white text-4xl"><Link to="/">Home</Link></li>
+            <li className="text-white text-4xl"><Link to="/about">About</Link></li>
+            <li className="text-white text-4xl"><Link to="/gallery">Gallery</Link></li>
+            <li className="text-white text-4xl"><a href="https://www.instagram.com/the31percent/">Instagram</a></li>
           </ul>
 
     </div>
+    {/* </div> */}
   </header>
 )
 

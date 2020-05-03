@@ -45,7 +45,7 @@ return (
 export default Gallery
 export const query = graphql`
   query GalleryPageQuery {
-    allContentfulAsset(limit: 1000, filter: { node_locale: { eq: "en-US" } }) {
+    allContentfulAsset(limit: 1000, filter: {node_locale: {eq: "en-US"}, title: {regex: "/gal/"}}) {
       edges {
         node {
           fluid(maxWidth: 1000) {
