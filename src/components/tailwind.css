@@ -99,7 +99,7 @@ main {
 	transform: scale(1.2);
 }
 
-/* .leftbox {
+.leftbox {
   animation: fadeInAnimation ease 2s; 
     animation-iteration-count: 1; 
     animation-fill-mode: forwards; 
@@ -111,7 +111,7 @@ main {
   100% { 
       opacity: 1; 
    } 
-}  */
+} 
 
 
 /**
