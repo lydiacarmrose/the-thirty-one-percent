@@ -314,7 +314,7 @@ const Article = ({ data }) => {
           <img
             className="lg:pr-20 lg:h-full w-full object-cover object-center "
             alt={mainImage.title}
-            src={mainImage.file.url}
+            src={mainImage.fluid.src}
           />
         </div>
         <div className="ml-5 lg:ml-0 lg:col-start-2 lg:col-span-1 lg:row-span-1s">
@@ -365,6 +365,9 @@ export const query = graphql`
         introText
       }
       mainImage {
+        fluid(maxWidth: 1000) {
+          src
+        }
         title
         file {
           fileName

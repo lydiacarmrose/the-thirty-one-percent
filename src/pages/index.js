@@ -41,7 +41,14 @@ const BlogPost = ({ data }) => {
                 <div key={post.id}>
                   <div className="imagebox">
                     <Link to={`/blogpost/${post.slug}`}>
-                      {findImage(post.mainImage.contentful_id) !== null && (
+                    {post.mainImage !== null && (
+              <img
+                className="w-auto h-full object-cover"
+                src={post.mainImage.fluid.src}
+                alt={post.mainImage.title}
+              />
+            )}
+                      {/* {findImage(post.mainImage.contentful_id) !== null && (
                         <img
                           className="w-auto h-full object-cover "
                           src={
@@ -53,7 +60,7 @@ const BlogPost = ({ data }) => {
                               .title
                           }
                         />
-                      )}
+                      )} */}
                     </Link>
                     <div className="grid justify-center">
                       <div className="grid items-center w-64 h-24 bg-white nameblock  -mt-32 ">
@@ -107,7 +114,11 @@ export const query = graphql`
             bodyText
           }
           mainImage {
+            title
             contentful_id
+            fluid(maxWidth: 1000)  {
+              src
+            }
           }
         }
       }
