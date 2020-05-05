@@ -13,7 +13,7 @@ const BlogPost = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="Blog posts" />
+      <SEO title="The Thirty-One Percent" />
 
       <div className="blogposts">
         <div className="leftbox md:w-1/2 md:h-full md:fixed md:flex md:flex-col md:justify-between mt-16">
