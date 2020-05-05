@@ -5,7 +5,7 @@ import "./index.css"
 
 const Header = ({ siteTitle }) => (
   <header className="h-0">
-    {/* <div className="fixed"> */}
+    <div className="fixed z-50"> 
 <div id="menuToggle">
 
     <input type="checkbox" />
@@ -25,7 +25,7 @@ const Header = ({ siteTitle }) => (
           </ul>
 
     </div>
-    {/* </div> */}
+    </div>
   </header>
 )
 
