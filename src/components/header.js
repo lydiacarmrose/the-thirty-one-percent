@@ -18,6 +18,8 @@ const Header = ({ siteTitle }) => (
     <ul id="menu" className="w-screen h-screen bg-blue-700 text-center flex flex-col justify-evenly right-0 bottom-0">
             <li className="-pt-5 text-white text-4xl"><Link to="/">Home</Link></li>
             <li className="text-white text-4xl"><Link to="/about">About</Link></li>
+            <li className="text-white text-4xl"><Link to="/9-to-5">9-to-5</Link></li>
+            <li className="text-white text-4xl"><Link to="/five-year-plan">Five-Year Plan</Link></li>
             <li className="text-white text-4xl"><Link to="/gallery">Gallery</Link></li>
             <li className="text-white text-4xl"><a href="https://www.instagram.com/the31percent/">Instagram</a></li>
           </ul>
