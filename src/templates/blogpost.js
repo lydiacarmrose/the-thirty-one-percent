@@ -176,9 +176,9 @@ function prepContent(dataContent) {
     } else if (nodeType == "paragraph") {
       const pClass = "w-full md:w-8/12 m-auto leading-relaxed pl-5 pr-5 mb-5 text-xl"
       const pClassLastLeft =
-        "w-full lg:w-8/12 m-auto leading-relaxed pl-5 pr-5 lg:border-l-4 lg:border-blue-700 lg:pb-5 text-xl pb-3 lg:pb-0"
+        "w-full lg:w-8/12 m-auto leading-relaxed pl-5 pr-5 lg:border-l-4 lg:border-blue-700 lg:pb-5 text-xl pb-3 "
       const pClassLastRite =
-        "w-full lg:w-8/12 m-auto leading-relaxed pl-5 pr-5 lg:border-r-4 lg:border-blue-700 pb-5 text-xl pb-3 lg:pb-0"
+        "w-full lg:w-8/12 m-auto leading-relaxed pl-5 pr-5 lg:border-r-4 lg:border-blue-700 pb-5 text-xl pb-3 lg:pb-5"
       const pClassOption = d[KEY_LAST_PARA]
         ? d[KEY_LEFT_WINDER]
           ? pClassLastLeft

@@ -1,7 +1,8 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Layout from "../components/layout"
+import Layout from "../components/homelayout"
 import SEO from "../components/seo"
+
 
 const BlogPost = ({ data }) => {
   const blogPosts = data.allContentfulArticle.edges
@@ -9,7 +10,29 @@ const BlogPost = ({ data }) => {
   return (
     <Layout>
       <SEO title="The Thirty-One Percent" />
-      
+      <header className="h-0">
+    <div className="fixed z-50"> 
+<div id="menuToggle">
+
+    <input type="checkbox" />
+
+    <span style={{background: "black"}}></span>
+    <span style={{background: "black"}}></span>
+    <span style={{background: "black"}}></span>
+    
+
+    <ul id="menu" className="w-screen h-screen bg-blue-700 text-center flex flex-col justify-evenly right-0 bottom-0">
+            <li className="-pt-5 text-white text-4xl"><Link to="/">Home</Link></li>
+            <li className="text-white text-4xl"><Link to="/about">About</Link></li>
+            <li className="text-white text-4xl"><Link to="/9-to-5">9-to-5</Link></li>
+            <li className="text-white text-4xl"><Link to="/five-year-plan">Five-Year Plan</Link></li>
+            <li className="text-white text-4xl"><Link to="/gallery">Gallery</Link></li>
+            <li className="text-white text-4xl"><a href="https://www.instagram.com/the31percent/">Instagram</a></li>
+          </ul>
+
+    </div>
+    </div>
+  </header>
 
       <div className="blogposts">
       <div className="md:w-1/2 md:h-auto md:float-right leftbox">

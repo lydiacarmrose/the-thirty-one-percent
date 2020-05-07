@@ -1,7 +1,7 @@
 
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Layout from "../components/layout"
+import Layout from "../components/homelayout"
 import SEO from "../components/seo"
 
 const NineFive = ({ data }) => {
@@ -10,14 +10,41 @@ const NineFive = ({ data }) => {
   return (
     <Layout>
       <SEO title="9-to-5" />
+      <header className="h-0">
+    <div className="fixed z-50"> 
+<div id="menuToggle">
 
-      <div className="blogposts">
+    <input type="checkbox" />
+
+    <span style={{background: "black"}}></span>
+    <span style={{background: "black"}}></span>
+    <span style={{background: "black"}}></span>
+    
+
+    <ul id="menu" className="w-screen h-screen bg-blue-700 text-center flex flex-col justify-evenly right-0 bottom-0">
+            <li className="-pt-5 text-white text-4xl"><Link to="/">Home</Link></li>
+            <li className="text-white text-4xl"><Link to="/about">About</Link></li>
+            <li className="text-white text-4xl"><Link to="/9-to-5">9-to-5</Link></li>
+            <li className="text-white text-4xl"><Link to="/five-year-plan">Five-Year Plan</Link></li>
+            <li className="text-white text-4xl"><Link to="/gallery">Gallery</Link></li>
+            <li className="text-white text-4xl"><a href="https://www.instagram.com/the31percent/">Instagram</a></li>
+          </ul>
+
+    </div>
+    </div>
+  </header>
+      <div className="">
+      <h1 className=" text-4xl pt-16 w-10/12 m-auto text-center pb-1">9-to-5</h1>
+      <h3 className="text-2xl pt-10 w-8/12 m-auto text-center pb-5">We're asking women who have built businesses from the ground up in food, retail, media, and other spaces in Boston about when they meet with clients, how emails get answered, and what a working lunch looks like for them.</h3>
+      </div>
+
+
          <div className="leftbox">
-          <div className="md:flex md:flex-wrap ">
+          <div className="md:flex md:flex-wrap m-auto md:w-10/12">
             {nineFive.map(({ node: post }) => (
-              <div className="w-screen md:w-1/2 md:h-auto px-5 py-5">
+              <div className="w-full md:w-1/2 md:h-auto px-5 py-5">
                 <div key={post.id}>
-                  <div className="gallerybox">
+                  <div className="h-64 gallerybox">
                     <Link to={`/blogpost/${post.slug}`}>
                     {post.mainImage !== null && (
               <img
@@ -46,7 +73,7 @@ const NineFive = ({ data }) => {
               </div>
             ))}
           </div>
-        </div>
+ 
 
       </div>
     </Layout>
