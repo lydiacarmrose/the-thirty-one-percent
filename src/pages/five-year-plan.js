@@ -34,12 +34,12 @@ const FiveYearPlan = ({ data }) => {
     </div>
   </header>
       <div className="">
-      <h1 className=" text-4xl pt-24 w-10/12 m-auto text-center pb-1">Five-Year Plan</h1>
-      <h3 className="text-2xl pt-10 w-8/12 m-auto text-center pb-5">We're asking women about what their plans (if any) were when they were 20 years old – were they struggling under a mountain of student debt? Or looking to abandon ship at a thankless job? </h3>
+      <h1 className=" text-4xl pt-16 w-10/12 m-auto text-center pb-1">Five-Year Plan</h1>
+      <h3 className="description text-2xl pt-10 w-8/12 m-auto text-center pb-5">We're asking women about what their plans (if any) were when they were 20 years old – were they struggling under a mountain of student debt? Or looking to abandon ship at a thankless job? </h3>
       </div>
 
       <div className="blogposts">
-         <div className="leftbox">
+         <div className="">
           <div className="md:flex md:flex-wrap m-auto md:w-10/12">
             {fiveYearPlan.map(({ node: post }) => (
               <div className="w-screen md:w-1/2 md:h-auto px-5 py-5">

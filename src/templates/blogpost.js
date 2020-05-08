@@ -318,7 +318,7 @@ const Article = ({ data }) => {
           />
         </div>
         <div className="ml-5 lg:ml-0 lg:col-start-2 lg:col-span-1 lg:row-span-1s">
-          <h1 className="bigname text-white ml-2 lg:-mt-0 lg:ml-0 text-5xl lg:text-6xl leading-tight lg:-ml-2  uppercase tracking-wide">
+          <h1 className="bigname text-white ml-2 lg:mt-10 lg:ml-0 text-5xl lg:text-6xl leading-tight lg:-ml-2  uppercase tracking-wide">
             {title}
             <br /> {lastName}
           </h1>

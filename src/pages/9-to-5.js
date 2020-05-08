@@ -35,11 +35,11 @@ const NineFive = ({ data }) => {
   </header>
       <div className="">
       <h1 className=" text-4xl pt-16 w-10/12 m-auto text-center pb-1">9-to-5</h1>
-      <h3 className="text-2xl pt-10 w-8/12 m-auto text-center pb-5">We're asking women who have built businesses from the ground up in food, retail, media, and other spaces in Boston about when they meet with clients, how emails get answered, and what a working lunch looks like for them.</h3>
+      <h3 className="description text-2xl pt-10 w-8/12 m-auto text-center pb-5 ">We're asking women who have built businesses from the ground up in food, retail, media, and other spaces in Boston about when they meet with clients, how emails get answered, and what a working lunch looks like for them.</h3>
       </div>
 
 
-         <div className="leftbox">
+         <div className="">
           <div className="md:flex md:flex-wrap m-auto md:w-10/12">
             {nineFive.map(({ node: post }) => (
               <div className="w-full md:w-1/2 md:h-auto px-5 py-5">

@@ -35,7 +35,25 @@ const BlogPost = ({ data }) => {
   </header>
 
       <div className="blogposts">
-      <div className="md:w-1/2 md:h-auto md:float-right leftbox">
+     
+        <div className="hidden md:block leftbox md:w-1/2 md:h-full md:fixed md:flex md:flex-col md:justify-between  md:pt-24">
+      
+<div>
+              <h1 className="grayname md:text-white md:text-left text-center text-2xl md:text-6xl xl:text-6xl md:pl-32 uppercase leading-relaxed tracking-wide md:pr-10">
+                The Thirty-One Percent
+              </h1>
+              </div>
+              <div>
+              <p className="about text-lg  md:text-2xl lg:text-3xl pl-3 pr-3 md:pl-32 md:pr-24 text-gray-700 pb-5 md:pb-32">
+                Traditional profiles tend to ask successful women about their
+                “favorite places to shop” or their “guilty pleasures.” You won’t
+                find those questions here. <span className=" font-bold">Thirty-one percent of businesses in Boston are owned
+                by women—we're telling their stories.</span>
+              </p>
+              </div>
+            </div>
+
+            <div className="md:w-1/2 md:h-auto md:float-right leftbox">
           <div className="md:flex md:flex-wrap ">
             {blogPosts.map(({ node: post }) => (
               <div className="w-screen md:w-1/2 md:h-auto pb-5 md:pb-0">
@@ -70,24 +88,6 @@ const BlogPost = ({ data }) => {
             ))}
           </div>
         </div>
-        <div className="leftbox md:w-1/2 md:h-full md:fixed md:flex md:flex-col md:justify-between mt-16">
-      
-<div>
-              <h1 className="md:text-left text-center text-2xl md:text-6xl md:pl-32 uppercase leading-relaxed tracking-wide md:pr-10">
-                The Thirty-One Percent
-              </h1>
-              </div>
-              <div>
-              <p className="about text-lg  md:text-3xl pl-3 pr-3 md:pl-32 md:pr-24 text-gray-700 pb-5 md:pb-32">
-                Traditional profiles tend to ask successful women about their
-                “favorite places to shop” or their “guilty pleasures.” You won’t
-                find those questions here. <span className="text-blue-700">31% of businesses in Boston are owned
-                by women—we're telling their stories.</span>
-              </p>
-              </div>
-            </div>
-
-    
        
 
       </div>
