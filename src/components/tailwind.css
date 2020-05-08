@@ -75,7 +75,7 @@ li {
 }
 
 .imagebox {
-  height: 400px;
+  height: 450px;
   overflow: hidden;
 }
 
@@ -113,7 +113,7 @@ main {
 }
 
 .leftbox {
-  background-color: #CCDBDC;
+  background-color: rgb(216, 230, 231);
   animation: fadeInAnimation ease 2s; 
     animation-iteration-count: 1; 
     animation-fill-mode: forwards; 
