@@ -363,7 +363,7 @@ export const query = graphql`
         introText
       }
       mainImage {
-        fluid(maxWidth: 1000) {
+        fluid(maxWidth: 1800) {
           src
         }
         title
