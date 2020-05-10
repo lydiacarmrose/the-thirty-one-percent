@@ -2,15 +2,16 @@
 
 ## To Install
 
-  Make sure npm is installed to your machine.
+  Set up your development environment using these instructions:
+  https://www.gatsbyjs.org/tutorial/part-zero/
 
-  Install Gatsby using 
+  Install Gatsby.
 
     ```shell
     npm install -g gatsby-cli
     ```
 
-  Navigate to the site's directory and install additional plugins by running
+  Navigate to the site's directory and install additional plugins.
 
   ```shell
   npm install
