@@ -7,13 +7,14 @@
 
   Install Gatsby.
 
-    ```shell
-    npm install -g gatsby-cli
-    ```
+  ```shell
+  npm install -g gatsby-cli
+  ```
 
   Navigate to the site's directory and install additional plugins.
 
   ```shell
+  cd the-thirty-one-percent
   npm install
   ```
 
@@ -23,7 +24,7 @@
     Navigate to the site’s directory and start it up.
 
     ```shell
-    cd the-thirty-one-percent/
+    cd the-thirty-one-percent
     gatsby develop
     ```
 
