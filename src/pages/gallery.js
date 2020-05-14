@@ -1,8 +1,7 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby" // to query for image data
-import Img from "gatsby-image" // to take image data and render it
+import { graphql } from "gatsby" // to query for image data
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+
 
 const Gallery = ({ data }) => {
 const Images = data.allContentfulAsset.edges
