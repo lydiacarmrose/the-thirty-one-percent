@@ -11,7 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 
 import "./tailwind.css"
-import "./richtext.js"
+
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
